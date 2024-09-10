@@ -1,38 +1,249 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #67B256; 
+  font-family: "Poppins", sans-serif;
+}
+
+
+.header {
+  background-color: #85E170;
+  height: 70px;
+  font-family: 'Lemon',serif ;
+  color: #254A1C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-left: 250px;
+  cursor: pointer;
+}
+
+
+.header div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #75CB62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #254A1C;
+  font-size: 30px;
+  margin-right: 250px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.header div:hover {
+  transform: scale(1.1);
+}
+
+.header a {
+  color: #254A1C;
+  text-decoration: none;
+}
+
+.main_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.icon a {
+  color: #75CB62;
+  text-decoration: none;
+  margin-top: 7px;
+}
+
+
+.main_child:hover .block {
+  opacity: 1;
+}
+.main_child h4 {
+  font-weight:600;
+  font-size: 16px;
+}
+.main_child h3 {
+  font-weight: 600;
+  font-size: 20px;
+  
+}
+
+.buttons_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  column-gap: 10px;
+
+}
+
+.buttons_div button {
+  width: 130px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.buttons_div button:nth-child(1) {
+  background-color: #488f37;
+  border: 2px solid #193213;
+}
+
+.buttons_div button:nth-child(2) {
+  background-color: #193213;
+  border: 2px solid #488f37;
+}
+
+.buttons_div button:hover {
+  transform: scale(1.1);
+}
+
+
+
+.main_child {
+  background-color: #254A1C;
   text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  position: relative;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
+.main_child img {
+  width: 320px;
+  height: 350px;
+  border: 4px solid #488f37;
+  margin: 10px;
+  display: block;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #488f37;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:#193213;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
   pointer-events: none;
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay.visible {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.cart_items {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+
+.cart_item {
+  height: 300px;
+  width: 80%;
+  background-color: #55b33d;
+  border: 4px solid #488f37;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.cart_item img {
+  width: 250px;
+  height: 250px;
+  margin-left: 100px;
+  border: 4px solid #254A1C;
+}
+
+.cart_item_text {
+  margin-right: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 30px;
+  color: #253920;
+}
+
+
+.cart_item button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #254A1C;
+  font-weight: 500;
+  font-family: 'Poppins',sans-serif;
   color: white;
+  transition: all 500ms ease;
 }
 
-.App-link {
-  color: #61dafb;
+.cart_buttons_div button:nth-child(1) {
+  background-color: #488f37;
+  border: 2px solid #193213;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart_buttons_div button:nth-child(2) {
+  background-color: #193213;
+  border: 2px solid #488f37;
+}
+
+
+.cart_buttons_div button:nth-child(2):hover {
+  background-color: #488f37;
+  border: 2px solid #193213;
+}
+
+.cart_buttons_div button:nth-child(1):hover {
+  background-color: #193213;
+  border: 2px solid #488f37;
+}
+
+.cart_buttons_div {
+  display: grid;
+  gap: 20px;
+  margin-right: 100px;
+  
 }
